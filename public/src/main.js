@@ -11,4 +11,7 @@ const firstLoad = async()=>{
 const moveCreate = ()=>{
     location.href = "/createroom"
 }
+const moveTell = (id)=>{
+    location.href = "/tell/"+id
+}
 firstLoad()

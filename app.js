@@ -107,6 +107,7 @@ app.get("/api/getroomlist",(req,res)=>{
 
 io.on("connection",(socket)=>{
     let userId;
+    let roomid = ""
     console.log("con")
     socket.on("sendUserId",(data)=>{
         console.log("aaaaa")
@@ -131,13 +132,14 @@ io.on("connection",(socket)=>{
         let roomName = data.roomName
         let pass = data.roomPass
         let user = data.user
-        roomList.push({id:roomID,roomName:roomName,pass:pass,user:[user],setting:[]})
+        roomList.push({id:roomID,roomName:roomName,pass:pass,user:[],setting:[]})
         console.log(roomList)
     })
     socket.on("videoPageFlg",(data)=>{
+        socket.join(data)
         roomList.forEach((i)=>{
             if(i.id == data){
-                socket.join(i.id)
+                roomid = i.id
                 i.user.push({id:userId,state:"nomal"})
                 io.to(i.id).emit("joinNewUser",userId)
                 io.to(userId).emit("startVideoSystem",i.user)
@@ -145,6 +147,21 @@ io.on("connection",(socket)=>{
             }
         })
 
+    })
+    socket.on("deleteRoom",(data)=>{
+        let userId = data.userId
+        let roomid = data.roomId
+        roomList.forEach((i)=>{
+            if(i.id == roomid){
+                i.user.forEach((h,index)=>{
+                    if(h.id == userId){
+                        i.user.splice(index,1)
+                        console.log(i.user)
+                        io.to(roomid).emit("disconUser",{newList:i.user,userId:userId})
+                    }
+                })
+            }
+        })
     })
     socket.on("disconnect",()=>{
         console.log("discon")
@@ -159,7 +176,17 @@ io.on("connection",(socket)=>{
             userList.splice(flg.index,1)
             console.log(userList)
         }
-
+        roomList.forEach((i)=>{
+            if(i.id == roomid){
+                i.user.forEach((h,index)=>{
+                    if(h.id == userId){
+                        i.user.splice(index,1)
+                        console.log(i.user)
+                        io.to(roomid).emit("disconUser",{newList:i.user,userId:userId})
+                    }
+                })
+            }
+        })
     })
 })
 
