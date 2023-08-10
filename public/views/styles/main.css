@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    font-family: "Book Antiqua";
+}
+.roomSelectMain{
+    width: 100vw;
+    height: 100vh;
+    background-color: #282A36;
+    overflow: scroll;
+}
+.roomSelectListTitleWarpp{
+    width: 600px;
+    height: 100px;
+    /* background-color: red; */
+    margin: auto;
+    display: flex;
+}
+.roomSelectTitle{
+    color: #f1ff5b;;
+    font-size: 240%;
+    font-weight: bold;
+    display: flex;
+    margin: auto;
+}
+.roomIDList{
+    width: 600px;
+    height: 100%;
+    /* background-color: red; */
+    margin: auto;
+}
+.roomWarpp{
+    margin: auto;
+    width: 90%;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: #343746;
+    display: flex;
+}
+.roomPersonIcon{
+    color: white;
+    font-size: 200px;
+}
+.personTextIcon{
+    font-size: 200%;
+}
+.roomNameWarpp{
+    display: flex;
+    width: 100%;
+}
+.roomPerson{
+    display: flex;
+    /* margin-right: 20px; */
+}
+.roomPersonIcon{
+    font-size: 180%;
+    color: white;
+    margin-top:35px;
+}
+.roomLinkIcon{
+    font-size: 170%;
+    color: white;
+    margin-top:36px;
+    margin-left: 15px;
+    margin-right: 18px;
+}
+.roomPersonText{
+    color: white;
+    font-size: 170%;
+    margin-top: 31px;
+    margin-left: 6px;
+}
+.roomNameText{
+    color:white;
+    font-size: 200%;
+    margin-top: 27px;
+    margin-left: 30px;
+    /* font-weight: ; */
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/views/styles/tell.css">
+</head>
+<body>
+        <div class="meetPageMain">
+            <div class="meetPageTop">
+                <span class="meetPageTopTitle">testMeet</span>
+                <button class="meetCopyButton">
+                    <i class="ri-link meetCopyIcon"></i>
+                </button>
+            </div> 
+            <div class="meetPageVideos">
+                <div class="videos">
+
+
+                </div>
+            </div>
+            <div class="meetPageBottom">
+                <div class="meetPageBottMain">
+                    <div class="meetPageBottCons">
+                        <button class="meetPageBttCam" id = "camChangeButton" onclick="changeCam()">
+                            <i class="ri-vidicon-fill meetPageCamIcon"></i>
+                            <span class="meetPageCamState">ON</span>
+                        </button>
+                        <button class="meetPageBttMike"  id = "mikeChangeButton" onclick="changeOudio()">
+                            <i class="ri-mic-fill meetPageMikeIcon"></i>
+                            <span class="meetPageMikeState">ON</span>
+                        </button>
+                        <button class="meetPageLeft">
+                            <span class="meetPageLeftText">退室</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- <h1>main</h1> -->
+    <!-- <button id = "camChangeButton" onclick="changeCam()">camOFF</button>
+    <button id = "mikeChangeButton" onclick="changeOudio()">mikeOFF</button> -->
+    <!-- <div class="videos"> -->
+
+
+    <script>
+        let socket = io()
+    </script>
+    <script src="/public/src/doms/videoWindow.js"></script>
+    <script src="/public/src/video.js"></script>
+    <script src="/public/src/videoSys.js"></script>
+    <script src="/public/src/p2p.js"></script>
+
+</body>
+</html>

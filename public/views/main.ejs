@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="/public/views/styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <span class="userID" style="display: none;"><%=userId%></span>
+    <div class="roomSelectMain">
+        <div class="roomSelectListTitleWarpp">
+            <span class="roomSelectTitle">RoomList</span>
+        </div>
+        <div class="roomIDList">
+            <div class="roomWarpp">
+                <div class="roomNameWarpp">
+                    <span class="roomNameText">testRoom1</span>
+                </div>
+                <div class="roomPerson">
+                    <i class="ri-user-fill roomPersonIcon"></i>
+                    <span class="roomPersonText">3</span>
+                    <i class="ri-link roomLinkIcon"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let socket = io()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/public/src/main.js"></script>
+    <script src="/public/src/doms/roomListDom.js"></script>
+</body>
+</html>

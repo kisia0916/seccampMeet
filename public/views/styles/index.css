@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+}
+.titleMain{
+    width: 100vw;
+    height: 100vh;
+    background-color: #282A36;
+}
+.titleTop{
+    display: flex;
+}
+.siteTitle{
+    display: flex;
+    color: #f1ff5b;
+    font-size: 320%;
+    font-weight: bold;
+
+
+}
+.mainWarpp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+}
+.titleButtom{
+    width: 100%;
+    display: flex;
+}
+.titleButton{
+    border: none;
+    width: 210px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #50FA7B;
+    margin: auto;
+    margin-top: 27%;
+}
+.titleButtonText{
+    font-size: 200%;
+    font-weight: bold;
+    color: #000000;
+
+}

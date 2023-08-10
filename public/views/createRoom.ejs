@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./styles/createRoom.css"> -->
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <script src="/public/src/createRoom.js"></script>
+    <script>
+        let socket = io()
+    </script>
+    <h1>createRoom</h1>
+    <div class="roomName">
+        <span>roomName</span>
+        <input type="text" class="createRoomName"/>
+    </div>
+    <div class="roomPass">
+        <span>roomPass</span>
+        <input type="text" class="createRoomPass"/>
+    </div>
+    <button onclick="createRoom()">作成</button>
+
+
+</body>
+</html>
